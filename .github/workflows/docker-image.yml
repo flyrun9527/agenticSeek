@@ -29,7 +29,7 @@ jobs:
       - name: Build Docker image
         run: |
           TAG="${{ github.event.inputs.image_tag }}"        
-          docker build --platform linux/amd64 --build-arg LIGHTEN=1 -f Dockerfile.backend -t registry.cn-beijing.aliyuncs.com/flyrun/agenticSeek:$TAG .
+          docker build --platform linux/amd64 --build-arg LIGHTEN=1 -f Dockerfile.backend -t registry.cn-beijing.aliyuncs.com/flyrun/agentic-seek:$TAG .
 
       - name: Push Docker image
         run: |
