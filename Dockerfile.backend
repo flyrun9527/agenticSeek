@@ -83,6 +83,9 @@ RUN chmod +x /opt/chrome/chrome
 
 RUN pip3 install --upgrade pip setuptools wheel
 
+RUN pip install -U huggingface_hub
+RUN huggingface-cli download --resume-download facebook/bart-large-mnli
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
