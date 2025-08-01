@@ -34,4 +34,4 @@ jobs:
       - name: Push Docker image
         run: |
           TAG="${{ github.event.inputs.image_tag }}"           
-          docker push registry.cn-beijing.aliyuncs.com/flyrun/ragflow:$TAG
+          docker push registry.cn-beijing.aliyuncs.com/flyrun/agentic-seek:$TAG
